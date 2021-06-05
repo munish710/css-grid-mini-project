@@ -8,6 +8,7 @@ Variables
   --mainBlack: #222;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
+  --darkGrey: #afafaf;
   --mainTransition: all 0.3s linear;
   --main-spacing: 0.2rem;
 }
@@ -74,4 +75,45 @@ p {
 .btn:hover {
   background: var(--primaryColor);
   color: var(--mainWhite);
+}
+
+/* 
+==========
+Main Navbar
+==========
+*/
+
+.main-navbar {
+  background: var(--darkGrey);
+  padding: 0 2rem;
+}
+
+.main-navbar li {
+  list-style: none;
+}
+
+.main-navbar a {
+  text-transform: capitalize;
+  display: block;
+  padding: 1rem 0;
+  color: var(--primaryColor);
+  letter-spacing: var(--main-spacing);
+  transition: var(--mainTransition);
+}
+
+.main-navbar a:hover {
+  color: var(--mainBlack);
+}
+
+@media screen and (min-width: 992px) {
+  .main-navbar ul {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .main-navbar a {
+    text-align: center;
+  }
 }
