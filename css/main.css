@@ -173,6 +173,9 @@ Cards
 .card {
   border: 1px solid var(--darkGrey);
   margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
 }
 
 .card img {
@@ -220,7 +223,6 @@ Cards
 .cards-center {
   display: grid;
   column-gap: 2rem;
-  /* 4 column */
   grid-template-columns: repeat(auto-fill, minmax(368px, 1fr));
   /* grid-template-columns: repeat(auto-fit, minmax(368px, 1fr)); */
 }
