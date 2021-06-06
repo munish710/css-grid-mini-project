@@ -176,7 +176,7 @@ Cards
 }
 
 .card img {
-  min-height: 20rem;
+  height: 20rem;
 }
 .card-info {
   padding: 1rem;
@@ -195,7 +195,8 @@ Cards
   cursor: pointer;
 }
 
-@media screen and (min-width: 768px) {
+/* Grid layout iwith media-queries */
+/* @media screen and (min-width: 768px) {
   .cards-center {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -207,4 +208,19 @@ Cards
   .cards-center {
     grid-template-columns: 1fr 1fr 1fr;
   }
+} */
+
+/* Layout without media query  */
+/* Know your max-width */
+/* How many columns on bigger screen size */
+/* what's ging to be my column-gap 64px*/
+/* calculate width of 1 column */
+/* (1170-64)/3=368px */
+
+.cards-center {
+  display: grid;
+  column-gap: 2rem;
+  /* 4 column */
+  grid-template-columns: repeat(auto-fill, minmax(368px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(368px, 1fr)); */
 }
